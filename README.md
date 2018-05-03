@@ -3,15 +3,34 @@
 ## Prerequisites
 
     brew install opam
-    opam switch list
-    opam switch 4.06.1  # or whatever the latest version is
+    opam init   # allow it to modify your ~/.bash_profile
+    eval `opam config env`
+    opam install core utop
 
-Add to ~/.bash_profile:
+Add this to `~/.ocamlinit`:
 
-    . ~/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+    #use "topfind";;
+    #thread;;
+    #require "core.top";;
+    #require "core.syntax";;
+    open Core;;
 
-Sources: [How to install opam](http://opam.ocaml.org/doc/Install.html), [OCaml for the Impatient](https://adambard.com/blog/getting-started-with-ocaml/)
+Optionally install these packages:
 
-## Run program
+    opam install async yojson core_extended core_bench cohttp async_graphics cryptokit menhir
+
+Sources: https://dev.realworldocaml.org/install.html
+
+## Command line
+
+Run a program in script mode
 
     ocaml hello.ml
+
+Launch interpreter
+
+    utop
+
+## Links
+
+- [Base API Documentation](https://ocaml.janestreet.com/ocaml-core/latest/doc/base/Base/index.html)
