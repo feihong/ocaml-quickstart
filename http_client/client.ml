@@ -4,7 +4,6 @@ https://github.com/mirage/ocaml-cohttp
 open Lwt
 open Cohttp
 open Cohttp_lwt_unix
-open Ppx_lwt
 
 let body =
   Client.get (Uri.of_string "http://ipecho.net/plain") >>= fun (resp, body) ->
