@@ -21,19 +21,19 @@ Optionally install these packages:
 
 Sources: https://dev.realworldocaml.org/install.html
 
-## Command line
-
-Build file using `ocamlbuild`:
-
-    ocamlbuild -pkgs cohttp-lwt-unix client_example.native
-
-Run a program in script mode
-
-    ocaml hello.ml
+## Building & running
 
 Launch interpreter
 
     utop
+
+Build program using jbuilder:
+
+    jbuilder build hello/hello.exe
+
+Run program using jbuilder (automatically builds as well):
+
+    jbuilder exec hello/hello.exe
 
 ## Links
 
