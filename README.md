@@ -23,6 +23,10 @@ Sources: https://dev.realworldocaml.org/install.html
 
 ## Command line
 
+Build file using `ocamlbuild`:
+
+    ocamlbuild -pkgs cohttp-lwt-unix client_example.native
+
 Run a program in script mode
 
     ocaml hello.ml
@@ -34,3 +38,4 @@ Launch interpreter
 ## Links
 
 - [Base API Documentation](https://ocaml.janestreet.com/ocaml-core/latest/doc/base/Base/index.html)
+- [Jbuilder Quickstart](http://jbuilder.readthedocs.io/en/latest/quick-start.html)
