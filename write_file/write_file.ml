@@ -11,14 +11,12 @@ let () =
   Lwt_main.run begin
     with_file ~mode:Lwt_io.output "output.txt" begin fun channel ->
       let writeln content = write_line channel content in
-      let%lwt () = writeln "Do you know these random Chinese characters?" in
-      let%lwt () = writeln "Test your knowledge!\n" in
-      let%lwt () = begin
-        for%lwt _i = 1 to 10 do
-          writeln (get_random_hanzi ())
-        done
-      end in
-      let%lwt () = writeln "\nHow many did you get right?" in
+      writeln "Do you know these random Chinese characters?";%lwt
+      writeln "Test your knowledge!\n";%lwt
+      for%lwt _i = 1 to 10 do
+        writeln (get_random_hanzi ())
+      done;%lwt
+      writeln "\nHow many did you get right?";%lwt
       Lwt_io.printf "Wrote to file output.txt\n"
     end
   end
