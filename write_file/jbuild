@@ -2,4 +2,6 @@
 
 (executable
  ((name write_file)
-  (libraries (core lwt.unix))))
+  (libraries (lwt.unix))
+  (preprocess
+   (pps (lwt.ppx)))))
