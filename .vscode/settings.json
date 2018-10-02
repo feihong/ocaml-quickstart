@@ -1,0 +1,4 @@
+{
+  "reason.path.ocamlmerlin": "./_opam/bin/ocamlmerlin",
+  "reason.path.ocpindent": "./_opam/bin/ocp-indent"
+}

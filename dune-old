@@ -1,0 +1,9 @@
+(executables
+ (libraries lwt_unix lwt_ppx cohttp_lwt_unix)
+ (preprocess (pps lwt_ppx))
+ (names hello http_client)
+)
+
+(alias
+ (name DEFAULT)
+ (deps hello.exe http_client.exe))

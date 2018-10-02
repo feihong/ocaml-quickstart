@@ -1,0 +1,22 @@
+opam-version: "2.0"
+name: "quickstart"
+authors: "Feihong"
+homepage: "https://github.com/feihong/ocaml-quickstart"
+maintainer: "ex@ample.com"
+dev-repo: "git+ssh://git@github.com:feihong/ocaml-quickstart.git"
+bug-reports: "https://github.com/feihong/ocaml-quickstart/issues"
+version: "0.1"
+build: [
+  [ "dune" "subst" ] {pinned}
+  [ "dune" "build" "-p" name "-j" jobs ]
+]
+depends: [
+  "dune" {build}
+  "opam-lock" {dev}
+  "merlin" {dev}
+  "core" {>= "v0.11.2"}
+  "cohttp" {>= "1.1.0"}
+  "cohttp-lwt" {>= "1.0.2"}
+  "lwt_ppx" {>= "1.2.1"}
+  "cohttp-lwt-unix" {>= "1.0.2"}
+]

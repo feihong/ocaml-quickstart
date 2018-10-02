@@ -1,0 +1,8 @@
+lib: [
+  "_build/install/default/lib/quickstart/META" {"META"}
+  "_build/install/default/lib/quickstart/opam" {"opam"}
+]
+doc: [
+  "_build/install/default/doc/quickstart/README.md"
+  "_build/install/default/doc/quickstart/LICENSE"
+]

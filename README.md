@@ -21,21 +21,36 @@ Optionally install these packages:
 
 Sources: https://dev.realworldocaml.org/install.html
 
+## Initializing project
+
+Create quickstart.opam
+
+Create local switch
+
+    opam switch create . 4.06.0 --deps-only
+
+Install packages in local switch
+
+    opam install --deps-only -y .
+
+
 ## Building & running
 
 Launch interpreter
 
     utop
 
-Build program using jbuilder:
+Build
 
-    jbuilder build hello/hello.exe
+    dune build
 
-Run program using jbuilder (automatically builds as well):
+Clean `_build` directory
 
-    jbuilder exec hello/hello.exe
+    dune clean
 
 ## Links
 
+- [Introduction to opam for npm/yarn users](https://khady.info/opam-npm.html)
+- [Starting an OCaml app project using Dune](https://medium.com/@bobbypriambodo/starting-an-ocaml-app-project-using-dune-d4f74e291de8)
+- [Dune docs](https://dune.readthedocs.io/en/latest/)
 - [Base API Documentation](https://ocaml.janestreet.com/ocaml-core/latest/doc/base/Base/index.html)
-- [Jbuilder Quickstart](http://jbuilder.readthedocs.io/en/latest/quick-start.html)
