@@ -9,3 +9,10 @@
  (libraries base lwt.unix lwt_ppx)
  (preprocess (pps lwt_ppx))
 )
+
+(executable
+ (name http_client)
+ (modules http_client)
+ (libraries lwt_ppx cohttp-lwt-unix)
+ (preprocess (pps lwt_ppx))
+)
