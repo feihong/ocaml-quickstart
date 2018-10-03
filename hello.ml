@@ -9,4 +9,6 @@ let get_random_hanzi () =
 let () =
   let () = Base.Random.self_init() in
   print_endline "你好世界！";
-  print_endline ("Random hanzi: " ^ get_random_hanzi())
+  for _ = 1 to 8 do
+    print_endline ("Random hanzi: " ^ get_random_hanzi())
+  done

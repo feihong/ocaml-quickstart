@@ -1,3 +1,11 @@
 (executable
  (name hello)
+ (modules hello)
  (libraries core))
+
+(executable
+ (name write_file)
+ (modules write_file)
+ (libraries base lwt.unix lwt_ppx)
+ (preprocess (pps lwt_ppx))
+)
